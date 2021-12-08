@@ -3,6 +3,7 @@ import { CacheProvider } from "@emotion/react";
 import createEmotionServer from "@emotion/server/create-instance";
 import React from "react";
 import ReactDOMServer from "react-dom/server";
+import { StaticRouter } from "react-router-dom/server";
 import App from "../App";
 
 const key = "custom";
@@ -10,11 +11,13 @@ const cache = createCache({ key });
 const { extractCriticalToChunks, constructStyleTagsFromChunks } =
     createEmotionServer(cache);
 
-const renderInitPage = () => {
+const renderInitPage = (url: string) => {
     const assets = require("../../dist/client/manifest.json");
     const html = ReactDOMServer.renderToString(
         <CacheProvider value={cache}>
-            <App />
+            <StaticRouter location={url}>
+                <App />
+            </StaticRouter>
         </CacheProvider>
     );
 

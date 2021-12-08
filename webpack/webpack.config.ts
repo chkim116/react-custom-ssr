@@ -1,10 +1,10 @@
 import { Configuration } from "webpack";
+import dotenv from "dotenv";
+dotenv.config();
 import PATHS from "./paths";
 import nodeExternals from "webpack-node-externals";
 import getPlugins from "./assets/plugin";
 import getModuleRules from "./assets/rules";
-import dotenv from "dotenv";
-dotenv.config();
 
 const getWebpackConfig = (target: "node" | "web"): Configuration => {
     const mode =

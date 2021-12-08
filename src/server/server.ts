@@ -28,7 +28,7 @@ server.use(
 server.use(express.static(process.cwd()));
 
 server.get("*", (req, res) => {
-    res.send(renderInitPage());
+    res.send(renderInitPage(req.url));
 });
 
 server.listen(PORT || 4000, () =>
