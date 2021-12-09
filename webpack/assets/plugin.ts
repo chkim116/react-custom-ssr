@@ -1,12 +1,8 @@
-import { HotModuleReplacementPlugin, BannerPlugin } from "webpack";
+import { HotModuleReplacementPlugin } from "webpack";
 import { WebpackManifestPlugin } from "webpack-manifest-plugin";
 
 const getPlugins = (isServer: boolean, mode: "production" | "development") => {
-    const bannerOptions = {
-        raw: true,
-        banner: 'require("source-map-support").install();',
-    };
-    const defaultPlugins = [new BannerPlugin(bannerOptions)];
+    const defaultPlugins: any[] = [];
 
     if (mode === "production") {
         return isServer
