@@ -30,6 +30,8 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 server.use(express.static(process.cwd()));
+server.use(express.json());
+server.use(express.urlencoded({ extended: false }));
 server.use(morgan("dev"));
 
 server.get("*", (req, res) => {
