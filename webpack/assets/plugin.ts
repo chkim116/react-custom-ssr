@@ -22,7 +22,7 @@ const getPlugins = (isServer: boolean, mode: "production" | "development") => {
 
     if (mode === "development") {
         return isServer
-            ? [...defaultPlugins, new HotModuleReplacementPlugin()]
+            ? [...defaultPlugins]
             : [
                   ...defaultPlugins,
                   new HotModuleReplacementPlugin(),
