@@ -38,7 +38,7 @@ const renderInitPage = (url: string, initialState: any) => {
                 ${headAssets.title.toString()}
                 ${headAssets.link.toString()}
                 ${styles}
-                <script defer src=/web/client/${assets["client.js"]}></script>
+                <script defer src=/app/${assets["client.js"]}></script>
             </head>
             <body>
             <div id="root">${html}</div>
