@@ -9,7 +9,8 @@
         "resolveJsonModule": true,
         "isolatedModules": true,
         "jsx": "react",
-        "baseUrl": "./src"
+        "baseUrl": "./src",
+        "typeRoots": ["src/types"]
     },
     "include": ["src/**/*.ts", "src/**/*.tsx"],
     "exclude": ["node_modules", "**/*.js"]
