@@ -1,6 +1,6 @@
 {
-    "watch": ["src/**/*.ts", "src/**/*.tsx"],
-    "exec": "npm run build:server && node ./dist/server/server.dev.js",
+    "watch": ["src/server/*.ts", "dist/server/*.js"],
+    "exec": "node ./dist/server/server.dev.js",
     "ext": "ts, tsx",
     "ignore": ["**/*.js"]
 }

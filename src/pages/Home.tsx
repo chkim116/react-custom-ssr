@@ -9,7 +9,7 @@ const Home = () => {
                 { name: "description", content: "리액트 커스텀 SSR입니다." },
             ]}
         >
-            <div>Homdde</div>
+            <div>Home</div>
         </PageSeo>
     );
 };

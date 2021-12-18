@@ -24,7 +24,9 @@ const getWebpackConfig = (target: "node" | "web"): Configuration => {
         context,
         target,
         entry: isServer
-            ? { server: PATHS.serverEntry }
+            ? {
+                  server: PATHS.serverEntry,
+              }
             : { client: [PATHS.clientEntry, hotMiddlewareScript] },
         resolve: {
             modules: [PATHS.app, PATHS.modules],

@@ -16,3 +16,7 @@ ReactDOM.hydrate(
     </CacheProvider>,
     document.getElementById("root")
 );
+
+if ((module as any)["hot"]) {
+    (module as any)["hot"].accept();
+}
